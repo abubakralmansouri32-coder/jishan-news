@@ -1,23 +1,40 @@
 backend:
-  name: git-gateway
+  name: github
+  repo: abubakralmansouri32-coder/almaydan-aljanubi
   branch: main
 
-media_folder: "assets/uploads"
-public_folder: "/assets/uploads"
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
 
 collections:
-    - name: "posts"
-    label: "Posts"
-    folder: "_posts"
+    - name: "news"
+    label: "الأخبار"
+    folder: "news"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    slug: "{{slug}}"
     fields:
-            - label: "Title"
-        name: "title"
-        widget: "string"
-            - label: "Publish Date"
-        name: "date"
-        widget: "datetime"
-            - label: "Body"
-        name: "body"
-        widget: "markdown"
+            - {label: "العنوان", name: "title", widget: "string"}
+            - {label: "التاريخ", name: "date", widget: "datetime"}
+            - {label: "الصورة", name: "image", widget: "image"}
+            - {label: "المحتوى", name: "body", widget: "markdown"}
+    - name: "sport"
+    label: "الرياضة"
+    folder: "sport"
+    create: true
+    slug: "{{slug}}"
+    fields:
+            - {label: "العنوان", name: "title", widget: "string"}
+            - {label: "التاريخ", name: "date", widget: "datetime"}
+            - {label: "الصورة", name: "image", widget: "image"}
+            - {label: "المحتوى", name: "body", widget: "markdown"}
+    - name: "articles"
+    label: "المقالات"
+    folder: "articles"
+    create: true
+    slug: "{{slug}}"
+    fields:
+            - {label: "العنوان", name: "title", widget: "string"}
+            - {label: "الكاتب", name: "author", widget: "string"}
+            - {label: "التاريخ", name: "date", widget: "datetime"}
+            - {label: "الصورة", name: "image", widget: "image"}
+            - {label: "المحتوى", name: "body", widget: "markdown"}
