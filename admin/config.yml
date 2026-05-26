@@ -3,38 +3,17 @@ backend:
   repo: abubakralmansouri32-coder/almaydan-aljanubi
   branch: main
 
-media_folder: "images/uploads"
-public_folder: "/images/uploads"
+media_folder: "static/uploads"
+public_folder: "/uploads"
 
 collections:
-    - name: "news"
-    label: "الأخبار"
-    folder: "news"
-    create: true
-    slug: "{{slug}}"
-    fields:
-            - {label: "العنوان", name: "title", widget: "string"}
-            - {label: "التاريخ", name: "date", widget: "datetime"}
-            - {label: "الصورة", name: "image", widget: "image"}
-            - {label: "المحتوى", name: "body", widget: "markdown"}
-    - name: "sport"
-    label: "الرياضة"
-    folder: "sport"
-    create: true
-    slug: "{{slug}}"
-    fields:
-            - {label: "العنوان", name: "title", widget: "string"}
-            - {label: "التاريخ", name: "date", widget: "datetime"}
-            - {label: "الصورة", name: "image", widget: "image"}
-            - {label: "المحتوى", name: "body", widget: "markdown"}
-    - name: "articles"
+    - name: "posts"
     label: "المقالات"
-    folder: "articles"
+    folder: "content/posts"
     create: true
     slug: "{{slug}}"
     fields:
             - {label: "العنوان", name: "title", widget: "string"}
-            - {label: "الكاتب", name: "author", widget: "string"}
             - {label: "التاريخ", name: "date", widget: "datetime"}
-            - {label: "الصورة", name: "image", widget: "image"}
+            - {label: "الصورة", name: "image", widget: "image", required: false}
             - {label: "المحتوى", name: "body", widget: "markdown"}
