@@ -8,12 +8,9 @@ public_folder: "/uploads"
 
 collections:
     - name: "posts"
-    label: "المقالات"
+    label: "Posts"
     folder: "content/posts"
     create: true
-    slug: "{{slug}}"
     fields:
-            - {label: "العنوان", name: "title", widget: "string"}
-            - {label: "التاريخ", name: "date", widget: "datetime"}
-            - {label: "الصورة", name: "image", widget: "image", required: false}
-            - {label: "المحتوى", name: "body", widget: "markdown"}
+            - {label: "Title", name: "title", widget: "string"}
+            - {label: "Body", name: "body", widget: "markdown"}
