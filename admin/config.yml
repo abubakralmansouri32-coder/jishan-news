@@ -1,16 +1,34 @@
 backend:
   name: github
-  repo: abubakralmansouri32-coder/almaydan-aljanubi
+  repo: abubakralmansouri32-coder/jishan-news
   branch: main
 
-media_folder: "static/uploads"
-public_folder: "/uploads"
+media_folder: "images"
+public_folder: "/images"
 
 collections:
-    - name: "posts"
-    label: "Posts"
-    folder: "content/posts"
+    - name: "news"
+    label: "الأخبار"
+    folder: "content/news"
     create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-            - {label: "Title", name: "title", widget: "string"}
-            - {label: "Body", name: "body", widget: "markdown"}
+            - label: "العنوان"
+        name: "title"
+        widget: "string"
+            - label: "القسم"
+        name: "category"
+        widget: "select"
+        options:
+                    - "سياسة"
+                    - "محليات"
+                    - "رياضة"
+                    - "اقتصاد"
+                    - "مقالات"
+            - label: "الصورة"
+        name: "image"
+        widget: "image"
+        required: false
+            - label: "المحتوى"
+        name: "body"
+        widget: "markdown"
