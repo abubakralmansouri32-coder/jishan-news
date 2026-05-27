@@ -7,12 +7,12 @@ media_folder: "images"
 public_folder: "/images"
 
 collections:
-    - name: "news"
-    label: "الأخبار"
-    folder: "content/news"
-    create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    fields:
+  - name: "news"
+            label:"الأخبار
+   folder: "content/news"
+         create: true
+ slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+                  fields:
             - label: "العنوان"
         name: "title"
         widget: "string"
