@@ -3,8 +3,9 @@ backend:
   repo: abubakralmansouri32-coder/jishan-news
   branch: main
 
-media_folder: "images"
-public_folder: "/images"
+media_folder: "content/news/images"
+public_folder: "/content/news/images"
+
 
 collections:
   - name: "news"
