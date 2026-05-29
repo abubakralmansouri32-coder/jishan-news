@@ -1,0 +1,19 @@
+backend:
+  name: github
+  repo: abubakralmansouri32-coder/jishan-news
+  branch: main
+
+media_folder: "content/news/images"
+public_folder: "/content/news/images"
+
+collections:
+    - name: "news"
+    label: "الأخبار"
+    folder: "content/news"
+    create: true
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
+    fields:
+            - {label: "العنوان", name: "title", widget: "string"}
+            - {label: "التاريخ", name: "date", widget: "datetime"}
+            - {label: "الصورة", name: "image", widget: "image", required: false}
+            - {label: "المحتوى", name: "body", widget: "markdown"}
