@@ -1,5 +1,5 @@
 backend:
-  name: github
+   name: git-gateway 
   repo: abubakralmansouri32-coder/jishan-news
   branch: main
 
