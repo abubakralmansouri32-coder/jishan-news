@@ -1,10 +1,9 @@
 backend:
-  name: github
-  repo: abubakralmansouri32-coder/jishan-news
-  branch: main
+  name: git-gateway
+ branch: main
 
-media_folder: "content/news/images"
-public_folder: "/content/news/images"
+media_folder: "static/images/uploads"
+public_folder: "/images/uploads"
 
 collections:
     - name: "news"
@@ -13,25 +12,7 @@ collections:
     create: true
     slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
     fields:
-            - label: "العنوان"
-        name: "title"
-        widget: "string"
-            - label: "القسم"
-        name: "category"
-        widget: "select"
-        options:
-                    - "سياسة"
-                    - "محليات"
-                    - "رياضة"
-                    - "اقتصاد"
-                    - "مقالات"
-                      - label: "الصورة"
-    name: "image"
-    widget: "image"
-    - label: "النص تحت الصورة"
-    name: "image_caption"
-    widget: "string"
-    required: false  
-            - label: "المحتوى"
-        name: "body"
-        widget: "markdown"
+            - {label: "العنوان", name: "title", widget: "string"}
+            - {label: "التاريخ", name: "date", widget: "datetime"}
+            - {label: "الصورة", name: "image", widget: "image"}
+            - {label: "المحتوى", name: "body", widget: "markdown"}
