@@ -25,6 +25,13 @@ collections:
                     - "رياضة"
                     - "اقتصاد"
                     - "مقالات"
+                      - label: "الصورة"
+    name: "image"
+    widget: "image"
+    - label: "النص تحت الصورة"
+    name: "image_caption"
+    widget: "string"
+    required: false  
             - label: "المحتوى"
         name: "body"
         widget: "markdown"
